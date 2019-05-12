@@ -1,0 +1,36 @@
+.wp-block-wceu2019bloq-skill-bar {
+	font-family: sans-serif;
+
+	.wceu2019bloq__bar {
+		width: 0;
+		background-color: #fff;
+		padding: 0 2% 0 0;
+		text-align: right;
+		height: 10px;
+		transition: width .5s ease-out, background-color .5s ease-in;
+	}
+}
+
+.wceu2019bloq__inspector-controls {
+	margin-top: 1em;
+}
+
+.wceu2019bloq__label {
+	display: block;
+}
+
+.wceu2019bloq__track {
+	background: #f7f7f7;
+}
+
+.wceu2019bloq__left {
+	text-align: left;
+}
+
+.wceu2019bloq__center {
+	text-align: center;
+}
+
+.wceu2019bloq__right {
+	text-align: right;
+}
