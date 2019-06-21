@@ -38,7 +38,7 @@ function wceu2019bloq_editor_assets() {
 	wp_enqueue_script(
 		'wceu2019bloq-script',
 		plugins_url( 'build/main.build.js', __FILE__ ),
-		array( 'wp-blocks', 'wp-i18n', 'wp-element' )
+		array( 'wp-blocks', 'wp-i18n', 'wp-element', 'wp-editor' )
 	);
 }
 
@@ -54,15 +54,17 @@ function wceu2019bloq_assets() {
 	);
 
 	$post = get_post();
-
 	if ( has_blocks( $post->post_content ) ) {
 		$blocks = parse_blocks( $post->post_content );
 
-		if ( is_array( $blocks ) && ! empty( $blocks ) && $blocks[0]['blockName'] === 'wceu2019bloq/skill-bar' ) {
-			wp_enqueue_script(
-				'wceu2019bloq-skill-bar-motion',
-				plugins_url( 'skill-bar/front.js', __FILE__ )
-			);
+		foreach ( $blocks as $block ) {
+			if ( 'wceu2019bloq/skill-bar' === $block['blockName'] ) {
+				wp_enqueue_script(
+					'wceu2019bloq-skill-bar-motion',
+					plugins_url( 'skill-bar/front.js', __FILE__ )
+				);
+				break;
+			}
 		}
 	}
 }
