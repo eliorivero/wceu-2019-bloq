@@ -52,8 +52,17 @@ function wceu2019bloq_assets() {
 		'wceu2019bloq-style',
 		plugins_url( 'build/main.style.css', __FILE__ )
 	);
-	wp_enqueue_script(
-		'wceu2019bloq-skill-bar-motion',
-		plugins_url( 'skill-bar/front.js', __FILE__ )
-	);
+
+	$post = get_post();
+
+	if ( has_blocks( $post->post_content ) ) {
+		$blocks = parse_blocks( $post->post_content );
+
+		if ( is_array( $blocks ) && ! empty( $blocks ) && $blocks[0]['blockName'] === 'wceu2019bloq/skill-bar' ) {
+			wp_enqueue_script(
+				'wceu2019bloq-skill-bar-motion',
+				plugins_url( 'skill-bar/front.js', __FILE__ )
+			);
+		}
+	}
 }
