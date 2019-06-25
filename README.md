@@ -1,6 +1,8 @@
 # WCEU 2019 Block
 Block to be created during the Gutenberg block creation workshop on the WordCamp Europe 2019, in Berlin, Germany.
 
+The slides shown during the workshop can be [found here](https://speakerdeck.com/eliorivero/creating-a-gutenberg-block-wceu-2019).
+
 # Installing
 
 Clone this repo to your `wp-content/plugins/` directory.
