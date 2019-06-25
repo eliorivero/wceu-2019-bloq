@@ -23,7 +23,7 @@ The main file, `wceu-2019-bloq.php` loads the JS and CSS needed for the block, e
 
 The files `package.json`, `webpack.config.js`, `.babelrc`, are needed to download the required JS packages, build the JS and SCSS, and translate ESNext syntax into ES5. The entry point for the build is the file `main.js`, that import the block definitions and registers each block.
 
-The folder `skill-bar` is the final block. The numbered folders are sequential stages in the the block creation.
+The numbered folders are sequential stages in the the block creation. The folder `skill-bar-5` is the final block.
 
 The basics elements of each block are an `index.js` file that includes the registration of the block with its editing UI and saving routines, plus a companion stylesheet. The block UI is later moved to the `edit.js` for better readability once it starts to grow.
 
