@@ -61,7 +61,7 @@ function wceu2019bloq_assets() {
 			if ( 'wceu2019bloq/skill-bar' === $block['blockName'] ) {
 				wp_enqueue_script(
 					'wceu2019bloq-skill-bar-motion',
-					plugins_url( 'skill-bar/front.js', __FILE__ )
+					plugins_url( 'skill-bar-5/front.js', __FILE__ )
 				);
 				break;
 			}
